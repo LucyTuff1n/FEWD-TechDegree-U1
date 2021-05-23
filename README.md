@@ -1,2 +1,2 @@
-# FEWD TechDegree U1
- My Personal Profile | FEWD TechDegree Unit One
+# TreeHouse FEWD TechDegree | Unit 1
+ My Personal Profile
