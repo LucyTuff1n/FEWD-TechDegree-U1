@@ -15,7 +15,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #999;
+  color: #00ADEE;
 }
 a:hover {
   color: #6633ff;
@@ -48,13 +48,19 @@ a:hover {
     color: white;
 }
 .nav li {
-  padding: 5px 10px 10px 10px;
+  padding: 5px 20px 10px 10px;
 }
 .nav a {
-  transition: all .5s;
+  color: white;
+  padding-bottom: 5px;
 }
 .nav a:hover {
-  color: white
+  color: white;
+  border-bottom: 3px solid #00ADEE;
+}
+
+.nav a.active {
+  border-bottom: 3px solid #00ADEE;
 }
 
 header {
@@ -62,8 +68,9 @@ header {
   text-align: center;
   background: url('images/profile-background-img.jpg') no-repeat top center ;
   background-size: cover;
+  background-color: #48506E;
   overflow: hidden;
-  padding-top: 60px;
+  padding: 50px 0px;
   border-bottom: 10px solid #ED4D9A;
 }
 header {
@@ -75,11 +82,11 @@ header .profile-image {
   height: 175px;
   border-radius: 50%;
   border: 8px solid #37B5B1;
-  transition: all .5s;
 }
 
 header .profile-image:hover {
-  transform: scale(1.1) rotate(5deg);
+  transition: 1s;
+  transform: rotate(360deg);
 }
 .tag {
   font-family: 'Roboto Slab', sans-serif;
@@ -96,21 +103,29 @@ header .profile-image:hover {
   color: yellow;
 }
 
-.card {
+.card, .card-full {
   margin: 30px;
-  padding: 0px 0px 40px;
-  max-width: 500px;
   text-align: left;
-  background: #fff;
+  background: #B6BFD8;
   border: 1px solid #ccc;
   transition: all .5s;
 }
-.card:hover {
+.card:hover, .card-full:hover {
   box-shadow: 0px 0px 20px -4px #31304c69;
 }
 
-.card h2 {
+.card h2, .card-full h2 {
   font-family: 'Roboto Slab', sans-serif;
+  font-size: 1.8em;
+  text-align: left;
+  color: #31304C;
+  padding: 20px 35px;
+  margin-top: 0px;
+}
+
+.card h3, .card-full h3 {
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 1.5em;
   text-align: center;
   background-color:#37B5B1;
   color: white;
@@ -119,25 +134,42 @@ header .profile-image:hover {
 }
 
 .card p {
+  padding: 0px 35px;
+}
+
+.card {
+  max-width: 500px;
+  padding: 0px 0px 40px;
+}
+
+.card-full {
+  max-width: 1100px;
+  min-height: 430px;
+  padding: 20px 10px;
+  margin-top: 50px;
+}
+
+.card-full p {
+  max-width: 50%;
   padding: 0px 30px;
 }
 
 ul.skills {
-  padding: 0;
+  padding: 0px 30px;
   text-align: center;
 }
 
 .skills li {
   border-radius: 6px;
   display: inline-block;
-  background: #FF6E6E;
+  background: #ED4D9A;
   color: white;
-  padding: 5px 10px;
+  padding: 5px 20px;
   margin: 2px;
 }
 
 .skills li:nth-child(odd) {
-  background: #00ADEE;
+  background: #FF6E6E;
 }
 
 footer {
@@ -215,6 +247,10 @@ a.social:hover {
 
   main p {
     line-height: 1.6em;
+  }
+
+  .card-full {
+    background: url('images/summary-profile-img.jpg') no-repeat top center ;
   }
 
   footer {
